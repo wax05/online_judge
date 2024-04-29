@@ -89,13 +89,3 @@ def judge(
                     csv_result[-1].append(str(err))
 
     return (result, csv_result)
-
-    # TODO:Export Csv Write Custom Function
-    with open(exam_name + ".csv", "w", encoding="utf-8") as file:
-        for row in csv_result:
-            for index, row_element in enumerate(row):
-                if index == 1:
-                    file.write(row_element)
-                else:
-                    file.write(row_element + ",")
-            file.write("\n")
